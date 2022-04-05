@@ -35,7 +35,7 @@ async def assis_change(_, message: Message):
     }
     await save_assistant(message.chat.id, "assistant", assis)
     await message.reply_text(
-        f"**Changed Assistant**\n\nChanged Assistant Account from **{ass}** to Assistant Number **{ass_num}**"
+        f"**Changed Assistant**\n\nChanged Assistant Account From **{ass}** To Assistant Number **{ass_num}**"
     )
 
 
@@ -44,7 +44,7 @@ ass_num_list2 = ["1", "2", "3", "4", "5", "Random"]
 
 @app.on_message(filters.command("setassistant") & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
-    usage = f"**Usage:**\n/setassistant [ASS_NO or Random]\n\nSelect from them\n{' | '.join(ass_num_list2)}\n\nUse 'Random' to set random Assistant"
+    usage = f"**Usage:**\n/setassistant [ASS_NO or Random]\n\nSelect From Them\n{' | '.join(ass_num_list2)}\n\nUse 'Random' to set random Assistant"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     query = message.text.split(None, 1)[1].strip()
@@ -57,7 +57,7 @@ async def assis_change(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         await message.reply_text(
-            f"**__Yukki Music Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
+            f"**__Ikhsan Music Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
         )
         assis = {
             "saveassistant": ran_ass,
@@ -66,7 +66,7 @@ async def assis_change(_, message: Message):
     else:
         ass = _assistant["saveassistant"]
         return await message.reply_text(
-            f"Pre-Saved Assistant Number {ass} Found.\n\nYou can change Assistant Via /changeassistant"
+            f"Pre-Saved Assistant Number {ass} Found.\n\nYou Can Change Assistant Via /changeassistant"
         )
 
 
@@ -75,7 +75,7 @@ async def check_ass(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         return await message.reply_text(
-            "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /play"
+            "No Pre-Saved Assistant Found.\n\nYou Can Set Assistant Via /play"
         )
     else:
         ass = _assistant["saveassistant"]
