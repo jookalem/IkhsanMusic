@@ -20,7 +20,7 @@ ASSISTANT_PREFIX = list(getenv("ASSISTANT_PREFIX", ".").split())
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 10 mins.
 # Remember to give value in Minutes
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "10"))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "120"))
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -44,7 +44,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Also without customizing or modifying as your own choice, this must be
 # filled with Yukki Music Bot Main Repository URL in value.
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/Randi356/YukkiMusicOld"
+    "UPSTREAM_REPO", "https://github.com/jookalem/IkhsanMusic"
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
