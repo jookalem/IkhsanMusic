@@ -120,7 +120,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "If you dont know this, Leave as it is",
-      "value": "https://github.com/Randi356/YukkiMusicOld",
+      "value": "https://github.com/jookalem/IkhsanMusic",
       "required": true
     },
     "UPSTREAM_BRANCH": {
