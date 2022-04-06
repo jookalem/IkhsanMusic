@@ -60,7 +60,7 @@ async def admins(_, message: Message):
         return await message.reply_text("Error! Wrong Usage of Command.")
     if not await is_active_chat(message.chat.id):
         return await message.reply_text(
-            "Nothing is playing on voice chat. No Active Voice Chat Found"
+            "Tidak Ada Music Yang Di Putar!"
         )
     chat_id = message.chat.id
     if message.command[0][1] == "a":
@@ -104,7 +104,7 @@ async def admins(_, message: Message):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await message.reply_text(
-                "No more music in __Queue__ \n\nLeaving Voice Chat"
+                "Tidak Ada Music Dalam Antrian\n\nMeninggalkan Obrolan Suara"
             )
             await stop_stream(chat_id)
             return
@@ -149,7 +149,7 @@ async def admins(_, message: Message):
                 final_output = await message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥 <b>__Started Playing:__</b> {title} \n⏳ <b>__Duration:__</b> {duration_min} \n🤴 <b>__Requested by:__ </b> {mention}",
+                    caption=f"<b>__Skipped Voice Chat__</b>\n\n📀 <b>Started Playing :</b> {title} \n⏳ <b>Duration :</b> {duration_min} \n🤴 <b>Requested by :</b> {mention}",
                 )
                 await start_timer(
                     videoid,
@@ -183,7 +183,7 @@ async def admins(_, message: Message):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🤴 **__Requested by:__** {mention}"
+                            f"<b>__Skipped Video Chat__</b>\n\n🤴 **Requested by :** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -223,7 +223,7 @@ async def admins(_, message: Message):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🎥 <b>__Started Video Playing:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n🤴 **__Requested by:__** {mention}"
+                            f"<b>__Skipped Video Chat__</b>\n\n📀 <b>Started Video Playing :</b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n🤴 **Requested by :** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -269,7 +269,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥 <b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳ <b>__Duration:__</b> {duration_min} Mins\n🤴 **__Requested by:__** {mention}"
+                        f"<b>__Skipped Voice Chat__</b>\n\n📀 <b>Started Playing :</b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳ <b>__Duration:__</b> {duration_min} Mins\n🤴 **Requested by :** {mention}"
                     ),
                 )
                 os.remove(thumb)
