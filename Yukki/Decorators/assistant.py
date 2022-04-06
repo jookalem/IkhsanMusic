@@ -63,7 +63,7 @@ def AssistantAdd(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🗑 Unban Assistant",
+                            text="ᴜɴʙᴀɴ ᴀssɪsᴛᴀɴᴛ",
                             callback_data=f"unban_assistant a|{ASS_ID}",
                         )
                     ],
@@ -87,7 +87,7 @@ def AssistantAdd(mystic):
                     pass
                 except Exception as e:
                     await message.reply_text(
-                        f"__Assistant Failed To Join__\n\n**Reason**: {e}"
+                        f"__Assistant Failed To Join__\n\n**Reason** : {e}"
                     )
                     return
             else:
