@@ -10,8 +10,6 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from motor.motor_asyncio import AsyncIOMotorClient as Bot
 from rich.console import Console
 from rich.table import Table
-from .logging import LOGGER
-from Yukki.core.userbot import Userbot
 
 from config import (ASSISTANT_PREFIX, DURATION_LIMIT_MIN, LOG_GROUP_ID,
                     LOG_SESSION)
@@ -24,9 +22,20 @@ from Yukki.Core.Clients.cli import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4,
 from Yukki.Utilities.changers import time_to_seconds
 from Yukki.Utilities.tasks import install_requirements
 
+from Yukki.core.bot import YukkiBot
+from .logging import LOGGER
+from Yukki.core.userbot import Userbot
+
 loop = asyncio.get_event_loop()
 console = Console()
 
+# Bot Client
+app = YukkiBot()
+
+# Assistant Client
+userbot = Userbot()
+
+YouTube = YouTubeAPI()
 
 ### Heroku Shit
 UPSTREAM_BRANCH = UPSTREAM_BRANCH
