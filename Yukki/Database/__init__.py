@@ -21,3 +21,5 @@ from .theme import _get_theme, get_theme, save_theme
 from .videocalls import (add_active_video_chat, get_active_video_chats,
                          get_video_limit, is_active_video_chat,
                          remove_active_video_chat, set_video_limit)
+# port by @rencrpx
+from .assistantdatabase import *
