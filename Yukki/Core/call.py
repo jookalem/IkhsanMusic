@@ -21,7 +21,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 import config
 from Yukki import LOGGER, YouTube, app
 from Yukki.misc import db
-from Yukki.utils.database import (add_active_chat,
+from Yukki.Database import (add_active_chat,
                                        add_active_video_chat,
                                        get_assistant,
                                        get_audio_bitrate, get_lang,
@@ -31,7 +31,7 @@ from Yukki.utils.database import (add_active_chat,
                                        remove_active_chat,
                                        remove_active_video_chat,
                                        set_loop)
-from Yukki.utils.exceptions import AssistantErr
+from Yukki.Utilities.exceptions import AssistantErr
 from Yukki.utils.inline.play import (stream_markup,
                                           telegram_markup)
 from Yukki.utils.stream.autoclear import auto_clean
