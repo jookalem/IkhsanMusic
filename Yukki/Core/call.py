@@ -34,7 +34,7 @@ from Yukki.Database import (add_active_chat,
 from Yukki.Utilities.exceptions import AssistantErr
 from Yukki.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from Yukki.utils.stream.autoclear import auto_clean
+from Yukki.Utilities.autoclear import auto_clean
 from Yukki.utils.thumbnails import gen_thumb
 
 autoend = {}
