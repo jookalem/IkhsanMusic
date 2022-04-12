@@ -10,8 +10,6 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from motor.motor_asyncio import AsyncIOMotorClient as Bot
 from rich.console import Console
 from rich.table import Table
-from .logging import LOGGER
-from Yukki.core.userbot import Userbot
 
 from config import (ASSISTANT_PREFIX, DURATION_LIMIT_MIN, LOG_GROUP_ID,
                     LOG_SESSION)
